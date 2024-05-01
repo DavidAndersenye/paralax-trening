@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Nettside</title>
+    <style>
+        /* Generell stil for hele nettsiden */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* For å hindre horisontal scrolling */
+        }
+
+        /* Stil for hovedseksjonen med parallax-effekt */
+        .parallax {
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+        }
+
+        /* Stil for ulike bakgrunnsbilder */
+        .bg1 {
+            background-image: url('stian.jpg');
+        }
+
+        .bg2 {
+            background-image: url('mikkel.png');
+        }
+
+        .bg3 {
+            background-image: url('tan.jpg');
+        }
+
+        /* Stil for sceneskifter */
+        .scene {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Første parallax-seksjon -->
+    <section class="parallax bg1">
+        <div class="scene">
+            <h1>Scene 1</h1>
+            <p>Dette er den første scenen med parallax-effekt.</p>
+        </div>
+    </section>
+
+    <!-- Andre parallax-seksjon -->
+    <section class="parallax bg2">
+        <div class="scene">
+            <h1>Scene 2</h1>
+            <p>Dette er den andre scenen med parallax-effekt.</p>
+        </div>
+    </section>
+
+    <!-- Tredje parallax-seksjon -->
+    <section class="parallax bg3">
+        <div class="scene">
+            <h1>Scene 3</h1>
+            <p>Dette er den tredje scenen med parallax-effekt.</p>
+        </div>
+    </section>
+</body>
+</html>
